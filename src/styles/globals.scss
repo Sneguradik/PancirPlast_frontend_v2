@@ -1,0 +1,31 @@
+@use "src/styles/variables" as *;
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Popins", sans-serif;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+h1, h2, h3, h4, h5, h6{
+
+}
+
+h1,.h1{@include h1}
+h2,.h2{@include h2}
+h3,.h3{@include h3}
+h4,.h4{@include h4}
+h5,.h5{@include h5}
+h6,.h6{@include h6}
+text,p,span{@include text}
+.small,small{@include small}
+.very-small{@include very-small}
+
+
+.max-w-custom{
+  max-width: 1440px;
+  width: 100%;
+}

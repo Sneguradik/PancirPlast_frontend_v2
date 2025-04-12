@@ -1,0 +1,52 @@
+@use "src/styles/variables" as *;
+
+.header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+  padding: 1rem;
+}
+.full_nav{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+.nav_item{
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  @include default-animation;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.catalog_product{
+  @include default-animation;
+  &:hover{
+    text-decoration: underline;
+    margin-left: .5rem;
+  }
+}
+
+.lang_item{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .5rem;
+  border-radius: .3rem;
+  @include default-animation;
+  &>small{
+    font-weight: bold;
+  }
+
+  &:hover{
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+}

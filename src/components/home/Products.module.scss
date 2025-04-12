@@ -1,0 +1,63 @@
+@use "src/styles/variables" as *;
+
+.page_btn{
+  width: .8rem;
+  aspect-ratio: 1/1;
+  background-color: var(--foreground);
+  border-radius: 50%;
+  border: 2px solid var(--foreground);
+  @include default-animation;
+
+  &:hover{
+    background-color: var(--background);
+    scale: 1.25;
+  }
+}
+
+.page_btn.active{
+  background-color: var(--background);
+  scale: 1.25;
+}
+
+.product{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+}
+.product_img{
+
+}
+.product_content{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.product_title{
+  font-weight: bold;
+  font-size: 5rem;
+
+}
+
+.feature{
+  display: grid;
+  gap: .25rem;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+
+  &>p{
+    grid-column-start: 2;
+  }
+
+  &>h3{
+    font-weight: bold;
+  }
+}
+.feature_icon{
+  margin-right: .25rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: .5rem;
+  border-radius: .5rem;
+}
