@@ -26,10 +26,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
   gap: 1rem;
+  justify-items: center;
 }
 .advantage{
   display: flex;
   flex-direction: column;
+  max-width: 30rem;
   gap: 1rem;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -124,4 +126,13 @@
   color : var(--background);
   padding: 0 1rem;
   border-radius: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .advantages{
+    grid-template-columns: 1fr;
+  }
+  .actions{
+    grid-template-columns: 1fr;
+  }
 }

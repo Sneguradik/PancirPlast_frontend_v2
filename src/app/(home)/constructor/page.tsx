@@ -10,6 +10,10 @@ import {Button} from "@components/ui/button";
 import {PiCurrencyRubBold} from "react-icons/pi";
 import {useState} from "react";
 import {calculateWindowPrice, IWindow} from "@/logic/Window";
+import SizeWindowFilter from "@components/constructor/SizeWindowFilter";
+import { RiCustomSize } from "react-icons/ri";
+import {TbSquares} from "react-icons/tb";
+import {GiDoorHandle} from "react-icons/gi";
 const oceanWideFont = localFont({
   src : [{
     path : "../../../font/Oceanwide-Semibold.otf"
@@ -38,38 +42,39 @@ export default function Constructor() {
 
         </div>
         <div className={styles.filter_block}>
-          <Filter
-            Icon={<LuFrame/>}
+          <SizeWindowFilter
+            Icon={<RiCustomSize />}
             name={"Размер окна"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."} />
-          <Filter
+            description={"Выберите оптимальный размер окна, который идеально впишется в ваше пространство. У нас представлены окна различных стандартных и нестандартных размеров, чтобы удовлетворить любые потребности. Просто укажите нужные параметры — высоту и ширину. Если вам нужно индивидуальное решение, мы также можем изготовить окна по вашему размеру."} />
+            <Filter
             Icon={<LuFrame/>}
             name={"Профиль"}
             onFilterChange={val =>
               setWindow(prevState =>
-              {return {...prevState, frame: {id:val.id, price:val.price}}})}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}/>
+              {return {...prevState, frame: val??null}})}
+            description={"Выберите профиль, который соответствует вашим требованиям по теплоизоляции, звукоизоляции и долговечности. Мы предлагаем широкий ассортимент пластиковых, алюминиевых и деревянных профилей, каждый из которых имеет свои преимущества. Укажите желаемый тип профиля, и наш фильтр подберет окна, которые идеально сочетаются с вашими потребностями и стилем интерьера."}/>
           <Filter
-            Icon={<LuFrame/>}
+            Icon={<TbSquares />}
             name={"Стеклопакет"}
             onFilterChange={val =>
               setWindow(prevState =>
-              {return {...prevState, glass: {id:val.id, price:val.price}}})}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}/>
+              {return {...prevState, glass: val??null}})}
+            description={"Выберите идеальный стеклопакет для вашего окна, который обеспечит отличную тепло- и звукоизоляцию. В нашем ассортименте — однокамерные, двухкамерные и многокамерные стеклопакеты, а также варианты с энергоэффективным покрытием и защитой от солнца. Укажите нужные характеристики, и наш фильтр подберет оптимальный вариант для вашего дома или офиса. Мы предлагаем только высококачественные стеклопакеты, которые обеспечат комфорт и энергоэффективность на долгие годы."}/>
           <Filter
-            Icon={<LuFrame/>}
+            Icon={<GiDoorHandle />}
+            nullable={true}
             name={"Ручка"}
             onFilterChange={val =>
               setWindow(prevState =>
-              {return {...prevState, handle: {id:val.id, price:val.price}}})}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}/>
+              {return {...prevState, handle: val??null}})}
+            description={"Этот фильтр-ручка для окон — это удобное и современное решение для вашего дома. Она идеально сочетает стильный дизайн и высокую функциональность, обеспечивая легкость в эксплуатации. Простой механизм позволяет быстро открывать и закрывать окно, при этом гарантируя надежную защиту от случайных открытий. Изготовлена из прочных материалов, что обеспечивает долгий срок службы и устойчивость к внешним воздействиям. Подходит для большинства стандартных окон, легко устанавливается и становится надежным дополнением вашего интерьера."}/>
           <Filter
             Icon={<LuFrame/>}
             name={"Фурнитуры"}
             onFilterChange={val =>
               setWindow(prevState =>
-              {return {...prevState, furniture: {value:val.id, price:val.price}}})}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}/>
+              {return {...prevState, furniture: val??null}})}
+            description={"Фурнитура для окон — это ключ к долговечности и надежности ваших конструкций. Высококачественные механизмы обеспечивают плавную работу и максимальную безопасность, предотвращая случайные повреждения. Каждое изделие тщательно проверено на прочность и устойчивость к нагрузкам, что гарантирует долгий срок службы. Современный и стильный дизайн фурнитуры легко впишется в любой интерьер, добавляя вашему окну завершенный и аккуратный вид."}/>
 
         </div>
       </div>

@@ -12,16 +12,18 @@ import {
 } from "@components/ui/dialog";
 import {PiCurrencyRubBold} from "react-icons/pi";
 import {IFilterProduct, IWindowOption} from "@/logic/Entities";
+import {RxCross1} from "react-icons/rx";
 
 export interface IFilterProps extends HTMLProps<HTMLDivElement> {
   Icon: JSX.Element,
   name: string,
   description: string,
-  onFilterChange?: (value: IWindowOption) => void,
+  onFilterChange?: (value: IWindowOption|null) => void,
+  nullable?: boolean,
 }
 
 
-export default function Filter({Icon, name, description, className, onFilterChange}: IFilterProps) {
+export default function Filter({Icon, name, description, className, onFilterChange, nullable}: IFilterProps) {
   const [selectedProduct, setSelectedProduct] = useState<IFilterProduct|null>(null);
   const [products, setProducts] = useState<IFilterProduct[]>([
     {
@@ -45,10 +47,12 @@ export default function Filter({Icon, name, description, className, onFilterChan
   ])
 
   useEffect(() => {
-    if (onFilterChange && selectedProduct) onFilterChange({
-      id: selectedProduct.id,
-      price: selectedProduct.price,
-    });
+    if (onFilterChange) {
+      onFilterChange(selectedProduct == null ? null : {
+        id: selectedProduct.id,
+        price: selectedProduct.price
+      });
+    }
   },[selectedProduct]);
   
   return (
@@ -62,11 +66,11 @@ export default function Filter({Icon, name, description, className, onFilterChan
       </div> : null}
       <Dialog>
         <DialogTrigger asChild>
-          <Button>Select</Button>
+          <Button>Выбрать</Button>
         </DialogTrigger>
         <DialogContent className="max-w-4xl max-h-120 flex gap-8 flex-col">
           <DialogHeader>
-            <DialogTitle>Выберете {name}</DialogTitle>
+            <DialogTitle>{name}</DialogTitle>
           </DialogHeader>
           <div className="flex gap-2 flex-col overflow-y-auto">
             {products.map((product) =>
@@ -78,6 +82,17 @@ export default function Filter({Icon, name, description, className, onFilterChan
                 <p className={"small"}>{product.description}</p>
               </div>
             )}
+            {nullable === true?
+              <div
+                className={cn(styles.option, selectedProduct == null?styles.selected:"")}
+                onClick={() => setSelectedProduct(null)}>
+                <div className={"flex items-center gap-4"}>
+                  <RxCross1 />
+                  <h4>Не устанавливать</h4>
+                </div>
+              </div>:
+              null
+            }
             <hr/>
           </div>
 

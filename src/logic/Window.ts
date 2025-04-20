@@ -1,7 +1,7 @@
 import {IWindowOption} from "@/logic/Entities";
 
 export interface IWindow {
-  size: IWindowOption | null
+  size: {width: number, height: number} | null
   frame: IWindowOption | null
   furniture: IWindowOption | null
   handle: IWindowOption | null
@@ -9,11 +9,6 @@ export interface IWindow {
   motor: IWindowOption | null
 }
 
-
-export interface IWindow extends IWindowOption {
-  width: number
-  height: number
-}
 
 export function calculateWindowPrice(window:IWindow): number {
   let price = 0

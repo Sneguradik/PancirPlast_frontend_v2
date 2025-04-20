@@ -36,3 +36,16 @@
 .selected{
   background-color: rgba(lightblue, 0.85);
 }
+.size_item{
+  display: grid;
+  gap: .125rem;
+
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: baseline;
+  &>small{
+    grid-column-start: 1;
+    grid-column: span 2;
+  }
+
+}

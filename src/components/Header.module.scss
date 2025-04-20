@@ -15,12 +15,15 @@
   width: 100%;
   justify-content: center;
 }
+.desktop_nav{
+  display: flex;
+}
 .nav_item{
   display: flex;
   align-items: center;
   gap: .25rem;
   @include default-animation;
-
+  width: max-content;
   &:hover{
     text-decoration: underline;
   }
@@ -49,4 +52,24 @@
     background-color: var(--foreground);
     color: var(--background);
   }
+}
+.short_nav{
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .desktop_nav{
+    display: none !important;
+  }
+  .short_nav{
+    display: flex;
+  }
+  .header{
+    grid-template-columns: 1fr 1fr;
+  }
+  .full_nav{
+    flex-direction: column;
+    align-items: start;
+  }
+
 }

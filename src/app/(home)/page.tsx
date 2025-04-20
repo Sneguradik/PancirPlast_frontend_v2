@@ -36,14 +36,41 @@ export default function Home() {
               <Image src={"/advantages/pcb.jpg"} alt={"tech"} fill objectFit={"cover"} />
             </div>
             <div className={styles.advantage_text}>
-              <h1>Технологии</h1>
-              <p>Мы предоставляем услуги по установке окон с гарантией высокого качества. Используем надежные материалы и современные технологии для долговечности и энергоэффективности. Наша команда профессионалов выполняет установку с учётом всех особенностей помещения, обеспечивая долгий срок службы окон и удовлетворение ваших ожиданий.</p>
+              <h1>Инновации</h1>
+              <p>Инновации в каждом элементе — от автоматических оконных приводов до умных рулонных штор. Управляйте светом и свежим воздухом одним нажатием на смартфон. Наши решения интегрируются с системами «умного дома» и работают по расписанию или по команде. Это не просто удобно — это новый уровень комфорта и энергоэффективности. Самый полезный гаджет для вашего умного дома, лучше только умный чайник!</p>
             </div>
           </div>
           <div className={styles.advantage}>
             <div className={styles.advantage_text}>
-              <h1>Качество</h1>
-              <p>Мы предоставляем услуги по установке окон с гарантией высокого качества. Используем только надежные материалы и современные технологии для долговечности и энергоэффективности. Наша команда профессионалов учитывает все особенности помещения, обеспечивая идеальный результат и долгий срок службы окон.</p>
+              <h1>Комфорт</h1>
+              <p>Автоматизация вошла в каждый уголок нашей жизни — от стиральных машин до умных колонок. Окно PANCIR — это ещё один шаг к настоящему комфорту. Оно само проветривает помещение, регулирует свет с помощью автоматических штор и интегрируется в систему «умного дома». Всё работает тихо, точно и без вашего участия. Настоящий комфорт — когда даже окно понимает вас с полуслова.</p>
+            </div>
+            <div className={styles.advantage_image}>
+              <Image src={"/advantages/comfort.jpg"} alt={"quality"} objectFit={"cover"} fill/>
+            </div>
+          </div>
+          <div className={styles.advantage}>
+            <div className={styles.advantage_image}>
+              <Image src={"/advantages/safety.jpg"} alt={"ecology"} objectFit={"cover"} fill/>
+            </div>
+            <div className={styles.advantage_text}>
+              <h1>Безопасность</h1>
+              <p>Вы уже выбрали калёное стекло для автомобиля, чтобы чувствовать себя в безопасности на дороге — сделайте то же самое дома. Современные технологии стеклопакетов делают ваше жильё не только уютным, но и безопасным. Продумайте безопасность на всех уровнях — даже через окна. С окнами PANCIR вы всегда под надёжной защитой.</p>
+            </div>
+          </div>
+          <div className={styles.advantage}>
+            <div className={styles.advantage_image}>
+              <Image src={"/advantages/aesthetic.jpg"} alt={"tech"} fill objectFit={"cover"} />
+            </div>
+            <div className={styles.advantage_text}>
+              <h1>Эстетика</h1>
+              <p>Хотите окно в уникальном цвете или с оригинальным рисунком на крышке привода? Мы готовы воплотить ваши идеи в жизнь! С помощью наших окон можно легко добавить индивидуальности интерьеру, подчеркивая стиль вашего дома. Сделайте своё пространство не только функциональным, но и эстетически привлекательным!</p>
+            </div>
+          </div>
+          <div className={styles.advantage}>
+            <div className={styles.advantage_text}>
+              <h1>Комфорт</h1>
+              <p>Автоматизация вошла в каждый уголок нашей жизни — от стиральных машин до умных колонок. Окно PANCIR — это ещё один шаг к настоящему комфорту. Оно само проветривает помещение, регулирует свет с помощью автоматических штор и интегрируется в систему «умного дома». Всё работает тихо, точно и без вашего участия. Настоящий комфорт — когда даже окно понимает вас с полуслова.</p>
             </div>
             <div className={styles.advantage_image}>
               <Image src={"/advantages/quality.jpg"} alt={"quality"} objectFit={"cover"} fill/>
@@ -51,11 +78,11 @@ export default function Home() {
           </div>
           <div className={styles.advantage}>
             <div className={styles.advantage_image}>
-              <Image src={"/advantages/eco.jpg"} alt={"ecology"} objectFit={"cover"} fill/>
+              <Image src={"/advantages/reliable.jpg"} alt={"ecology"} objectFit={"cover"} fill/>
             </div>
             <div className={styles.advantage_text}>
-              <h1>Экология</h1>
-              <p>Мы уделяем внимание энергоэффективности и экологичности наших окон. Они снижают теплопотери, что помогает сократить расходы на отопление и кондиционирование, создавая комфортный микроклимат. Используем только безопасные для здоровья и окружающей среды материалы. Выбирая наши окна, вы улучшаете качество жизни и вносите вклад в сохранение природы.</p>
+              <h1>Надёжность</h1>
+              <p>Стабильность, стойкость, сила — вот что гарантируют наши окна. Прижим привода до 60 кг и прочные стеклопакеты обеспечат надёжность даже в самых сложных условиях. Ветер, дождь или мороз — ваши окна останутся непоколебимыми. С нашими окнами вам не страшны никакие испытания!</p>
             </div>
           </div>
         </div>
@@ -73,13 +100,13 @@ export default function Home() {
           <div className={styles.action}>
             <h1><IoHammer /></h1>
             <h3>Сборка в конструкторе</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Создайте окно своей мечты! Соберите идеальное решение для вашего дома в нашем конструкторе.</p>
           </div>
         </Link>
         <div className={styles.action}>
           <h1><HiCursorClick /></h1>
           <h3>Выбор в каталоге</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Выберите идеальные окна для вашего дома! Откройте наш каталог и найдите лучшее решение для вашего интерьера.</p>
         </div>
       </div>
 
@@ -108,21 +135,21 @@ export default function Home() {
         <h2 className={styles.section_heading}><FaQuestion />FAQ</h2>
         <Accordion type={"single"} collapsible className={"w-full flex flex-col gap-2"}>
           <AccordionItem value={"item-1"} className={styles.faq_item}>
-            <AccordionTrigger><h3>Сколько стоят наши услуги?</h3></AccordionTrigger>
+            <AccordionTrigger><h3>Можно ли сделать окно не прямоугольным?</h3></AccordionTrigger>
             <AccordionContent>
-              Наши услуги стоят того!
+              Да, Обратитесь к менеджеру и сделайте себе круглой окно на чердак или даже треугольное
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value={"item-2"} className={styles.faq_item}>
-            <AccordionTrigger><h3>Сколько стоят наши услуги?</h3></AccordionTrigger>
+            <AccordionTrigger><h3>Где будет выходить провод привода?</h3></AccordionTrigger>
             <AccordionContent>
-              Наши услуги стоят того!
+              При монтаже вам протянут его внутри оконной створки, и кабель выйдет у нижней петли, герметичность самого окна при этом не нарушается
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value={"item-3"} className={styles.faq_item}>
-            <AccordionTrigger><h3>Сколько стоят наши услуги?</h3></AccordionTrigger>
+            <AccordionTrigger><h3>Работает ли привод не с Алисой?</h3></AccordionTrigger>
             <AccordionContent>
-              Наши услуги стоят того!
+              Да, Siri, Алиса, Маруся. Также есть подключение к SprutHub, к системе Swiitch, Apple HomeKit
             </AccordionContent>
           </AccordionItem>
         </Accordion>

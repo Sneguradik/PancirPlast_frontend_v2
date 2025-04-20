@@ -94,7 +94,7 @@ function GetPage(pageNumber: number) {
 
   switch (pageNumber) {
     case 1:
-      chartData.datasets[0].data = [9,3,5,7];
+      chartData.datasets[0].data = [5,5,5,9];
 
       return (
         <div className={styles.product}>
@@ -102,15 +102,27 @@ function GetPage(pageNumber: number) {
 
           </div>
           <div className={styles.product_content}>
-            <h1 className={cn(oceanWideFont.className, styles.product_title)}>Профиль 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1 className={cn(oceanWideFont.className, styles.product_title)}>REHAU Brillant-Design</h1>
+            <ul className={styles.frame_desc_list}>
+              <li>Системная глубина: 60 мм</li>
+              <li>Камеры: 3–5</li>
+              <li>Теплоизоляция (Uw): 0,75–1,0 Вт/(м²·К)</li>
+              <li >
+                Особенности:
+                <ul className={styles.frame_desc_sublist}>
+                  <li>Бюджетный вариант для умеренного климата</li>
+                  <li>Подходит для квартир и дач</li>
+                  <li>Ламинация в 20+ цветов RAL</li>
+                </ul>
+              </li>
+            </ul>
             <Radar data={chartData} options={chartConfig}/>
             <Button className={"flex items-center gap-2 h4 pt-6 pb-6 w-full"}><FaCartShopping />В корзину</Button>
           </div>
         </div>
       );
     case 2:
-      chartData.datasets[0].data = [9,3,5,7];
+      chartData.datasets[0].data = [7,7,5,9];
 
       return (
         <div className={styles.product}>
@@ -118,15 +130,27 @@ function GetPage(pageNumber: number) {
 
           </div>
           <div className={styles.product_content}>
-            <h1 className={cn(oceanWideFont.className, styles.product_title)}>Профиль 2</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1 className={cn(oceanWideFont.className, styles.product_title)}>REHAU Grazio</h1>
+            <ul className={styles.frame_desc_list}>
+              <li>Системная глубина: 70 мм</li>
+              <li>Камеры: 5</li>
+              <li>Теплоизоляция (Uw): 0,64–0,85 Вт/(м²·К)</li>
+              <li >
+                Особенности:
+                <ul className={styles.frame_desc_sublist}>
+                  <li>Узкие рамы для максимального освещения</li>
+                  <li>Усиленная защита от шума (до 45 дБ)</li>
+                  <li>Рекомендуется для городских квартир</li>
+                </ul>
+              </li>
+            </ul>
             <Radar data={chartData} options={chartConfig}/>
             <Button className={"flex items-center gap-2 h4 pt-6 pb-6 w-full"}><FaCartShopping />В корзину</Button>
           </div>
         </div>
       );
     case 3:
-      chartData.datasets[0].data = [9,3,5,7];
+      chartData.datasets[0].data = [8,8,5,9];
 
       return (
         <div className={styles.product}>
@@ -134,15 +158,27 @@ function GetPage(pageNumber: number) {
 
           </div>
           <div className={styles.product_content}>
-            <h1 className={cn(oceanWideFont.className, styles.product_title)}>Профиль 3</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1 className={cn(oceanWideFont.className, styles.product_title)}>REHAU Intelio</h1>
+            <ul className={styles.frame_desc_list}>
+              <li>Системная глубина: 80 мм</li>
+              <li>Камеры: 6</li>
+              <li>Теплоизоляция (Uw): 0,59–0,75 Вт/(м²·К)</li>
+              <li >
+                Особенности:
+                <ul className={styles.frame_desc_sublist}>
+                  <li>Для холодного климата (Сибирь, Урал)</li>
+                  <li>Выдерживает перепады температур от -50°C до +60°C</li>
+                  <li>Совместимость с противовзломной фурнитурой</li>
+                </ul>
+              </li>
+            </ul>
             <Radar data={chartData} options={chartConfig}/>
             <Button className={"flex items-center gap-2 h4 pt-6 pb-6 w-full"}><FaCartShopping />В корзину</Button>
           </div>
         </div>
       );
     case 4:
-      chartData.datasets[0].data = [9,3,5,7];
+      chartData.datasets[0].data = [9,9,5,9];
 
       return (
         <div className={styles.product}>
@@ -150,8 +186,18 @@ function GetPage(pageNumber: number) {
 
           </div>
           <div className={styles.product_content}>
-            <h1 className={cn(oceanWideFont.className, styles.product_title)}>Профиль 4</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1 className={cn(oceanWideFont.className, styles.product_title)}>REHAU Geneo</h1>
+            <ul className={styles.frame_desc_list}>
+              <li>Системная глубина: 86 мм</li>
+              <li>Камеры: 6</li>
+              <li>Теплоизоляция (Uw): 0,53/(м²·К)</li>
+              <li >
+                Особенности:
+                <ul className={styles.frame_desc_sublist}>
+                  <li>Rau-Fipron: Уникальный материал прочнее</li>
+                </ul>
+              </li>
+            </ul>
             <Radar data={chartData} options={chartConfig}/>
             <Button className={"flex items-center gap-2 h4 pt-6 pb-6 w-full"}><FaCartShopping />В корзину</Button>
           </div>

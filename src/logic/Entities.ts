@@ -1,12 +1,9 @@
 export interface IWindowOption {
   id: string;
   price: number,
-  meta: Record<string, string|number>
 }
 
-export interface IFilterProduct {
-  id: string
+export interface IFilterProduct extends IWindowOption {
   name: string;
   description: string;
-  price: number;
 }
