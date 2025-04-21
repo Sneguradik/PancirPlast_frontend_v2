@@ -20,31 +20,13 @@ export interface IFilterProps extends HTMLProps<HTMLDivElement> {
   description: string,
   onFilterChange?: (value: IWindowOption|null) => void,
   nullable?: boolean,
+  products: IFilterProduct[],
 }
 
 
-export default function Filter({Icon, name, description, className, onFilterChange, nullable}: IFilterProps) {
+export default function Filter({Icon, name, description, className, onFilterChange, nullable, products}: IFilterProps) {
   const [selectedProduct, setSelectedProduct] = useState<IFilterProduct|null>(null);
-  const [products, setProducts] = useState<IFilterProduct[]>([
-    {
-      id: "ef46f087-9670-4d53-acd8-e07481e01f7b",
-      name: "Rehau profile",
-      price: 23394,
-      description: "Современный оконный профиль из высококачественного ПВХ обеспечивает отличную тепло- и шумоизоляцию. Прочная конструкция с многокамерной системой и герметичными уплотнителями гарантирует долговечность и комфорт в любое время года."
-    },
-    {
-      id: "feefee8e-0148-4f5d-bc3b-9f918458a3c8",
-      name: "Other profile",
-      price: 14553,
-      description: "Инновационный оконный профиль с усиленной конструкцией и повышенной энергоэффективностью для идеального микроклимата в помещении. Устойчив к деформациям, обладает высокой звукоизоляцией и стильным дизайном, подходящим для любых интерьеров."
-    },
-    {
-      id: "e9e4d607-df45-43d3-b642-ca7ca15814ad",
-      name: "STC profile",
-      price: 26204,
-      description: "Элегантный и надежный оконный профиль с превосходной теплоизоляцией и защитой от шума. Усиленная конструкция и герметичность обеспечивают долговечность, а современный дизайн гармонично вписывается в любое окно."
-    },
-  ])
+
 
   useEffect(() => {
     if (onFilterChange) {

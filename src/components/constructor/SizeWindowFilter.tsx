@@ -68,7 +68,7 @@ export default function SizeWindowFilter({Icon, name, description, className, on
         </div> : null}
       <Dialog>
         <DialogTrigger asChild>
-          <Button>Select</Button>
+          <Button>Выбрать</Button>
         </DialogTrigger>
         <DialogContent className="max-w-4xl max-h-120 flex gap-8 flex-col">
           <DialogHeader>

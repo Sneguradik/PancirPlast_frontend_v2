@@ -16,6 +16,7 @@ import {
 } from 'chart.js';
 import {Radar} from "react-chartjs-2";
 import {ChartData, ChartOptions} from "chart.js";
+import Image from "next/image";
 
 const oceanWideFont = localFont({
   src : [{
@@ -98,8 +99,10 @@ function GetPage(pageNumber: number) {
 
       return (
         <div className={styles.product}>
-          <div className={styles.product_img}>
-
+          <div className={"flex justify-center"}>
+            <div className={styles.product_img}>
+              <Image src={"/windows/rehau_brilliant.PNG"} alt={"Rehau Brilliant"} objectFit={"contain"} fill />
+            </div>
           </div>
           <div className={styles.product_content}>
             <h1 className={cn(oceanWideFont.className, styles.product_title)}>REHAU Brillant-Design</h1>
@@ -126,8 +129,10 @@ function GetPage(pageNumber: number) {
 
       return (
         <div className={styles.product}>
-          <div className={styles.product_img}>
-
+          <div className={"flex justify-center"}>
+            <div className={styles.product_img}>
+              <Image src={"/windows/rehau_grazio.PNG"} alt={"Rehau Brilliant"} objectFit={"contain"} fill />
+            </div>
           </div>
           <div className={styles.product_content}>
             <h1 className={cn(oceanWideFont.className, styles.product_title)}>REHAU Grazio</h1>
@@ -154,8 +159,10 @@ function GetPage(pageNumber: number) {
 
       return (
         <div className={styles.product}>
-          <div className={styles.product_img}>
-
+          <div className={"flex justify-center"}>
+            <div className={styles.product_img}>
+              <Image src={"/windows/rehau_intelio.PNG"} alt={"Rehau Brilliant"} objectFit={"contain"} fill />
+            </div>
           </div>
           <div className={styles.product_content}>
             <h1 className={cn(oceanWideFont.className, styles.product_title)}>REHAU Intelio</h1>
@@ -182,8 +189,10 @@ function GetPage(pageNumber: number) {
 
       return (
         <div className={styles.product}>
-          <div className={styles.product_img}>
-
+          <div className={"flex justify-center"}>
+            <div className={styles.product_img}>
+              <Image src={"/windows/rehau_geno.PNG"} alt={"Rehau Brilliant"} objectFit={"contain"} fill />
+            </div>
           </div>
           <div className={styles.product_content}>
             <h1 className={cn(oceanWideFont.className, styles.product_title)}>REHAU Geneo</h1>
@@ -206,8 +215,10 @@ function GetPage(pageNumber: number) {
     default:
       return (
         <div className={styles.product}>
-          <div className={styles.product_img}>
-
+          <div className={"flex justify-center"}>
+            <div className={styles.product_img}>
+              <Image src={"/windows/pancir.jpg"} alt={"Rehau Brilliant"} objectFit={"contain"} fill />
+            </div>
           </div>
           <div className={styles.product_content}>
             <h1 className={cn(oceanWideFont.className, styles.product_title)}>PANCIR</h1>

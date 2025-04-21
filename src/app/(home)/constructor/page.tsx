@@ -14,6 +14,8 @@ import SizeWindowFilter from "@components/constructor/SizeWindowFilter";
 import { RiCustomSize } from "react-icons/ri";
 import {TbSquares} from "react-icons/tb";
 import {GiDoorHandle} from "react-icons/gi";
+import {FaGears} from "react-icons/fa6";
+import {filters} from "@/logic/Filters";
 const oceanWideFont = localFont({
   src : [{
     path : "../../../font/Oceanwide-Semibold.otf"
@@ -49,6 +51,7 @@ export default function Constructor() {
             <Filter
             Icon={<LuFrame/>}
             name={"Профиль"}
+            products={filters["Профиль"]}
             onFilterChange={val =>
               setWindow(prevState =>
               {return {...prevState, frame: val??null}})}
@@ -56,6 +59,7 @@ export default function Constructor() {
           <Filter
             Icon={<TbSquares />}
             name={"Стеклопакет"}
+            products={filters["Стеклопакет"]}
             onFilterChange={val =>
               setWindow(prevState =>
               {return {...prevState, glass: val??null}})}
@@ -64,13 +68,15 @@ export default function Constructor() {
             Icon={<GiDoorHandle />}
             nullable={true}
             name={"Ручка"}
+            products={filters["Ручка"]}
             onFilterChange={val =>
               setWindow(prevState =>
               {return {...prevState, handle: val??null}})}
             description={"Этот фильтр-ручка для окон — это удобное и современное решение для вашего дома. Она идеально сочетает стильный дизайн и высокую функциональность, обеспечивая легкость в эксплуатации. Простой механизм позволяет быстро открывать и закрывать окно, при этом гарантируя надежную защиту от случайных открытий. Изготовлена из прочных материалов, что обеспечивает долгий срок службы и устойчивость к внешним воздействиям. Подходит для большинства стандартных окон, легко устанавливается и становится надежным дополнением вашего интерьера."}/>
           <Filter
-            Icon={<LuFrame/>}
-            name={"Фурнитуры"}
+            Icon={<FaGears />}
+            name={"Фурнитурa"}
+            products={filters["Фурнитура"]}
             onFilterChange={val =>
               setWindow(prevState =>
               {return {...prevState, furniture: val??null}})}
