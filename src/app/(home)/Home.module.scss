@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   max-width: 30rem;
+  width: 100%;
   gap: 1rem;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -75,6 +76,7 @@
 }
 .action{
   display: grid;
+  width: 100%;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   padding: 1rem;
@@ -135,4 +137,14 @@
   .actions{
     grid-template-columns: 1fr;
   }
+}
+@media screen and (max-width: 676px) {
+  .action{
+    display: flex;
+    flex-direction: column;
+  }
+  .advantage_image{
+    aspect-ratio: 3/4;
+  }
+
 }
