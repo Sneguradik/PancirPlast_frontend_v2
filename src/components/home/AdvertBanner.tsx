@@ -3,11 +3,8 @@ import styles from "./AdvertBanner.module.scss";
 import {cn} from "@/lib/utils";
 import {ToastContentProps} from "react-toastify";
 
-export interface AdvertBannerProps extends ToastContentProps {
 
-}
-
-export default function AdvertBanner({closeToast, toastProps}: AdvertBannerProps) {
+export default function AdvertBanner(props: ToastContentProps) {
   return (
     <div className={cn(styles.container)}  >
       <div className={styles.img}>
