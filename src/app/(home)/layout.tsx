@@ -4,6 +4,7 @@ import "@styles/globals.scss";
 import styles from "./MainLayout.module.scss";
 import Header from "@components/Header";
 import {CustomThemeProvider} from "@components/CustomThemeProvider";
+import {ToastContainer} from "react-toastify";
 
 export const metadata: Metadata = {
   title: "Pancir Plast",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={styles.main}>
+        <ToastContainer/>
         <CustomThemeProvider
           attribute="class"
           defaultTheme="light"

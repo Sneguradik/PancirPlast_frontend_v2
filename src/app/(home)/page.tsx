@@ -1,3 +1,4 @@
+"use client"
 import {cn} from "@/lib/utils";
 import LogoWithoutTurtle from "@components/LogoWithoutTurtle";
 import {Button} from "@components/ui/button";
@@ -12,8 +13,24 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 import Image from "next/image";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@components/ui/accordion";
 import Link from "next/link";
+import {toast} from "react-toastify";
+import {useEffect} from "react";
+import AdvertBanner from "@components/home/AdvertBanner";
 
 export default function Home() {
+
+  useEffect(() => {
+    toast(AdvertBanner,{
+      hideProgressBar:true,
+      style:{
+        padding: "0",
+        width: "30rem",
+        backgroundColor:"#2f2d19"
+      },
+      position: "bottom-right"
+    })
+  },[])
+
   return (
     <main className={cn("max-w-custom gap-20 flex-col flex")}>
 

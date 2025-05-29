@@ -1,0 +1,22 @@
+@use "src/styles/variables" as *;
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+.img{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/1;
+
+}
+@media screen and (max-width: 480px){
+  .container{
+    max-width: 20rem;
+  }
+
+}
