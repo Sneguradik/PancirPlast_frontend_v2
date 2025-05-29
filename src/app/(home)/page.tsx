@@ -24,7 +24,7 @@ export default function Home() {
       hideProgressBar:true,
       style:{
         padding: "0",
-        width: "30rem",
+        width: "20rem",
         backgroundColor:"#2f2d19"
       },
       position: "bottom-right"
