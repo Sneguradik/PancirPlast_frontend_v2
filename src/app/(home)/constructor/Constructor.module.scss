@@ -69,3 +69,8 @@
     transform: translateY(0%);
   }
 }
+@media screen and (max-width: 786px) {
+  .constructor_wrapper{
+    grid-template-columns: 1fr;
+  }
+}

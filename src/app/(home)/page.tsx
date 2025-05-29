@@ -37,8 +37,8 @@ export default function Home() {
       {/*Title section*/}
       <div className={"mt-64 flex flex-col w-3/5 gap-8"}>
         <LogoWithoutTurtle className={""}/>
-        <h5>Компания, которая изменит ваше представление об окнах. Век технологий настал – пустите его в свой дом.</h5>
-        <div className={"flex items-center gap-4"}>
+        <h5>Как панцирь черепахи - Безопасность наших Окон.<br/> Инновации - для Вашего Комфорта!</h5>
+        <div className={"flex items-center gap-4 flex-wrap"}>
           <Link href={"/constructor"}><Button className={styles.main_btn}><h5>Собрать окно</h5><FaArrowRight /></Button></Link>
           <Button className={styles.main_btn} variant={"outline"}><h5>Перейти в каталог</h5><GrCatalog /></Button>
         </div>

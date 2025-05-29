@@ -32,7 +32,7 @@ export default function ContactPage() {
     if (preferredContact == ContactFormType.Telegram && !telegram ||
       preferredContact == ContactFormType.Email && !email ||
       preferredContact == ContactFormType.Phone && !phone) {
-      warn("Пожалуйста укажите ваlш предпочитаемый контакт")
+      warn("Пожалуйста укажите ваш предпочитаемый контакт")
       return;
     }
     if (!name) return warn("Пожалуйста укажите имя");

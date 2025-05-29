@@ -3,7 +3,6 @@ import Link from "next/link";
 import styles from "./Header.module.scss";
 import Image from "next/image";
 import {RiHome2Line} from "react-icons/ri";
-import {FaQuestion} from "react-icons/fa6";
 import {GrCatalog} from "react-icons/gr";
 import {IoHammer} from "react-icons/io5";
 import {Button} from "@components/ui/button";
@@ -11,6 +10,7 @@ import {Popover, PopoverContent, PopoverTrigger} from "@components/ui/popover";
 import {LuLanguages, LuMenu} from "react-icons/lu";
 import {Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@components/ui/sheet";
 import {cn} from "@/lib/utils";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Header() {
   const isAuth = false;
@@ -41,7 +41,7 @@ export default function Header() {
           </PopoverContent>
         </Popover>
         <Link className={styles.nav_item} href="/constructor"><IoHammer /><h6>Конструктор</h6></Link>
-        <Link className={styles.nav_item} href="/about"><FaQuestion /><h6>О нас</h6></Link>
+        <Link className={styles.nav_item} href="/contact"><FaPhoneAlt /><h6>Связаться</h6></Link>
       </nav>
       <div className={cn("flex gap-4 w-full justify-end items-center", styles.desktop_nav)}>
         <Popover>
@@ -111,7 +111,7 @@ export default function Header() {
                   </PopoverContent>
                 </Popover>
                 <Link className={styles.nav_item} href="/constructor"><IoHammer /><h6>Конструктор</h6></Link>
-                <Link className={styles.nav_item} href="/about"><FaQuestion /><h6>О нас</h6></Link>
+                <Link className={styles.nav_item} href="/contact"><FaPhoneAlt /><h6>Связаться</h6></Link>
               </nav>
             </div>
             <SheetFooter className={"grid grid-cols-2 gap-2"}>
